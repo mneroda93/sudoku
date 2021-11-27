@@ -1,0 +1,36 @@
+/* Increase each block visibility whitening the border */
+#sudokuBoard tr:nth-child(3) td {
+	border-bottom-color: rgb(230, 230, 230);
+}
+
+/* Increase each block visibility whitening the border */
+#sudokuBoard tr:nth-child(6) td {
+	border-bottom-color: rgb(230, 230, 230);
+}
+
+/* Increase each block visibility whitening the border */
+#sudokuBoard td:nth-child(3) {
+	border-right-color: rgb(230, 230, 230);
+}
+
+/* Increase each block visibility whitening the border */
+#sudokuBoard td:nth-child(6) {
+	border-right-color: rgb(230, 230, 230);
+}
+
+/* Users' input cell should be brighter than a static cell already containing a number */
+#sudokuBoard td:not(.static) {
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* Slightly increase cell's brightness when hovered to improve visibility */
+#sudokuBoard td:not(.static):hover {
+	transition: 0.2s;
+	background-color: rgba(80, 80, 80, 0.8);
+}
+
+/* Selected button should grab the most attention */
+.btnSelected:not(.static) {
+	background-color: rgba(130, 130, 130, 0.1) !important;
+	text-shadow: 0 0 5px black !important;
+}

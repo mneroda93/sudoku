@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sudoku Adventure</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="extra.css">
+  <link rel="stylesheet" href="responsiveness.css">
+</head>
+
+<body>
+
+<span id="wallpaper">Image by<a
+  href="https://pixabay.com/users/blende12-201217/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3371229"
+  target="_blank">
+            Gerhard G.</a>
+        from <a
+    href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3371229"
+    target="_blank">
+            Pixabay</a>
+    </span>
+
+<div id="entrance" style="display: block"> <!-- Login page -->
+  <span id="credentials" style="margin-top: 50px">Please enter your credentials</span>
+  <label>
+    <input id="login" value="abcd" placeholder="Login" autocomplete="off">
+  </label>
+  <label>
+    <input id="password" placeholder="Password" value="1234" autocomplete="off" style="-webkit-text-security: disc;">
+  </label>
+  <button id="submit" style="margin-top: 35px">Submit</button>
+  <span id="error">Incorrect login or password!</span>
+</div>
+
+<div id="menu"> <!-- Main menu -->
+  <button style="margin-top: 40px;">Play</button>
+  <button>Scoreboard</button>
+  <button>Instructions</button>
+</div>
+
+<div id="difficulty" style="display: none"> <!-- Difficulty Picker -->
+  <span id="message" style="font-size: 35px; margin-top: 20px;"></span>
+  <span style="font-size: 30px; padding-bottom: 20px; margin-top: 40px">Please choose a difficulty</span>
+  <button>Easy</button>
+  <button>Normal</button>
+  <button>Hard</button>
+  <button id="diffBackBtn" class="backBtn">Back to Menu</button>
+</div>
+
+<div id="instructions" style="display: none"> <!-- Instruction page -->
+  <p style="font-weight: bolder; font-size: 30px; padding: 30px 0 20px 0; text-align: center">Welcome to Sudoku
+    Adventure!</p>
+  <ul id="instList">
+    <li>Sudoku is a 9x9 cell puzzle divided into rows, columns and blocks</li>
+    <li>Which means, each sudoku puzzle has <strong>9 rows</strong>, <strong>9 columns</strong> and <strong>9
+      blocks</strong></li>
+    <li>You must fill each cell following these constraints:</li>
+    <ol>
+      <li>Every <strong>row</strong> has a unique number between 1 and 9 inclusive <strong>without duplications</strong>
+      </li>
+      <li>Every <strong>column</strong> has a unique number between 1 and 9 inclusive <strong>without
+        duplications</strong></li>
+      <li>Every <strong>block</strong> has a unique number between 1 and 9 inclusive <strong>without
+        duplications</strong></li>
+    </ol>
+  </ul>
+  <p id="haveFun" style="padding-left: 30px; font-size: 25px; font-weight: bolder; color:orange;">Good luck and have fun
+    playing!</p>
+  <button id="instBackBtn" class="backBtn">Back to Menu</button>
+</div>
+
+<div id="scoreboard" style="display: none"> <!-- Scoreboard -->
+  <div id="scoreboardTable"></div>
+  <button id="scoreBackBtn" class="backBtn">Back to Menu</button>
+</div>
+
+<div id="game"> <!-- Sudoku board together with keyboard and option keys -->
+  <span id="time">00:00:00</span>
+  <table id="sudokuBoard"></table>
+  <table id="keyboard" style="table-layout: fixed">
+    <tr>
+      <td class="key">1</td>
+      <td class="key">2</td>
+      <td class="key">3</td>
+    </tr>
+    <tr>
+      <td class="key">4</td>
+      <td class="key">5</td>
+      <td class="key">6</td>
+    </tr>
+    <tr>
+      <td class="key">7</td>
+      <td class="key">8</td>
+      <td class="key">9</td>
+    </tr>
+    <tr>
+      <td class="blank"></td>
+      <td class="key">Clear</td>
+      <td class="blank"></td>
+    </tr>
+  </table>
+  <div id="options">
+    <span>Finish</span>
+    <span>Again</span>
+    <span>New</span>
+  </div>
+</div>
+
+<script src="app.js"></script> <!-- Let HTML load first, and THEN the javascript -->
+
+</body>
+
+</html>

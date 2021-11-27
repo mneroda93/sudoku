@@ -1,0 +1,332 @@
+
+* {
+	font-family: "Dubai Light", sans-serif;
+	font-size: 20px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+body, html {
+	overflow: hidden;
+	user-select: none;
+	background-image: url('wallpaper.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	width: 100px;
+	height: 40px;
+	background-color: white;
+	margin: 0.2vw;
+	border: 1px solid black;
+	outline: none;
+	border-radius: 50px 50px 50px 50px;
+}
+
+button:hover {
+	transition: 0.2s;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+button:active {
+	background-color: white;
+}
+
+input {
+	display: block;
+	position: inherit;
+	text-align: left;
+	margin: 0.5vw auto 0.5vw auto;
+	padding-left: 1vw;
+	width: 300px;
+	height: 40px;
+	border: 1px solid black;
+	border-radius: 50px 50px 50px 50px;
+	font-size: 18px;
+}
+
+input:focus {
+	outline: none;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}
+
+input:hover::placeholder {
+	transition: 0.2s;
+	color: transparent;
+}
+
+::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+span {
+	display: block;
+	font-size: 25px;
+}
+
+a {
+	color: blue;
+	font-weight: bolder;
+}
+
+#entrance, #menu, #difficulty, #instructions, #scoreboard {
+	display: none;
+	position: absolute;
+	padding-top: 10px;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 400px;
+	margin-left: -250px;
+	margin-top: -200px;
+	border: 1px solid black;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(5px);
+	color: white;
+	border-radius: 50px 50px 50px 50px;
+}
+
+#instructions {
+	margin-top: -300px;
+	margin-left: -400px;
+	padding: 0;
+	width: 800px;
+	height: 600px;
+	overflow: auto;
+}
+
+#instructions p, #instructions li {
+	text-align: left;
+	height: auto;
+	margin: 0 0 0 5px;
+}
+
+#diffBackBtn {
+	top: 75px;
+	right: -310px;
+}
+
+#scoreBackBtn {
+	position: fixed;
+	left: 615px;
+	top: 90%;
+}
+
+#instBackBtn {
+	top: 150px;
+	left: 608px;
+}
+
+.backBtn {
+	display: block;
+	position: relative;
+	width: 150px !important;
+}
+
+#scoreboard {
+	margin-left: -400px;
+	margin-top: -400px;
+	width: 802px;
+	height: 800px;
+	overflow: auto;
+	scroll-behavior: auto;
+}
+
+#scoreboard table {
+	width: max-content;
+	margin-top: 10px;
+	border-collapse: collapse;
+}
+
+#scoreboard td {
+	width: 200px;
+	padding: 10px;
+	text-align: center;
+}
+
+#scoreboard th {
+	border-bottom: 1px solid white;
+	padding: 10px;
+}
+
+#scoreboard td {
+	border-bottom: 1px solid rgb(130, 130, 130);
+}
+
+#menu button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 25px;
+	margin-top: 1vw;
+}
+
+#instList {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#instList li {
+	margin-left: 15px;
+}
+
+
+.afterLostGame {
+	position: fixed;
+	top: 320px !important;
+	left: 305px;
+}
+
+.afterWonGame {
+	top: 70px !important;
+}
+
+#game {
+	display: none;
+}
+
+#time {
+	color: white;
+	position: absolute;
+	border: 1px solid rgb(230, 230, 230);
+	border-radius: 50px 50px 50px 50px;
+	background-color: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(5px);
+	top: 15%;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+}
+
+#error {
+	padding-top: 1vw;
+	display: none;
+	font-size: 25px;
+	color: crimson;
+	font-weight: bold;
+}
+
+#sudokuBoard {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -275px;
+	margin-left: -275px;
+	backdrop-filter: blur(5px);
+}
+
+#sudokuBoard table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+#sudokuBoard td {
+	width: 60px;
+	height: 60px;
+	color: white;
+	font-size: 30px;
+	border: 1px solid rgb(20, 20, 20);
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+#options {
+	display: block;
+	position: fixed;
+	top: 90%;
+	left: 50%;
+	height: 100px;
+	width: 500px;
+	margin-top: -50px;
+	margin-left: -250px;
+}
+
+#options span {
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	width: 150px;
+	color: white;
+	font-size: 30px;
+	margin: 0.2vw;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+	border: 1px solid rgb(20, 20, 20);
+	border-radius: 50px 50px 50px 50px;
+}
+
+#options span:hover {
+	transition: 0.2s;
+	background-color: rgba(80, 80, 80, 0.8);
+}
+
+#options span:active {
+	background-color: rgba(130, 130, 130, 0.1) !important;
+	color: black !important;
+}
+
+#keyboard {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: 350px;
+	height: 300px;
+	width: 300px;
+	border-collapse: collapse;
+}
+
+#keyboard td {
+	font-size: 30px;
+	color: white;
+	border: 1px solid white;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+}
+
+#keyboard td:not(.blank):hover {
+	transition: 0.2s;
+	background-color: rgba(80, 80, 80, 0.8);
+}
+
+#keyboard td:not(.blank):active {
+	background-color: rgba(130, 130, 130, 0.1) !important;
+	color: black !important;
+}
+
+#keyboard tr:last-child td:last-child {
+	border-bottom-right-radius: 500px;
+	border-right: none;
+	border-bottom: none;
+}
+
+#keyboard tr:last-child td:nth-child(2) {
+	border-bottom: none;
+}
+
+#keyboard tr:last-child td:first-child {
+	border-bottom-left-radius: 500px;
+	border-left: none;
+	border-bottom: none;
+}
+
+#wallpaper {
+	position: absolute;
+	bottom: 1vw;
+	right: 1vw;
+}
+
+.blankMessage {
+	top: 150px !important;
+}
